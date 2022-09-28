@@ -35,6 +35,9 @@ import React,{useState} from 'react';
 import { Tabs,Tab } from "@mui/material";
 import { Onlinesales } from './component/0nlinesales';
 import { Athomesales } from './component/Athomesales';
+import { Valumebysegment } from './component/Valumebysegment';
+import { ValumeperCapita } from './component/ValumeperCapita';
+import { Price } from './component/Price';
 
 Chart.register(
   ArcElement,
@@ -70,14 +73,21 @@ function App() {
   const[val,setVal]=useState("") 
   return (
     <React.Fragment>
+      <h1 className="head"> Alcoholic Drinks </h1>
       
    <Tabs value={val} onChange={(e,value)=>setVal(value)}>
                 <Tab label="Revenue Share Online / offline" value="online"/>
                 <Tab label="Revenue at Home and Out of Home" value="Home"/>
+                <Tab label="Valume by segment" value="valume"/>
+                <Tab label="Valume per Capita" value="Capita" />
+                <Tab label="Price per Capita" value="Price" />
               
             </Tabs>
             {val==="online" && <Onlinesales/>}
             {val==="Home" && <Athomesales/>} 
+            {val==="valume" && <Valumebysegment/>}
+            {val==="Capita" && <ValumeperCapita/>}
+            {val==="Price" && <Price/>}
             <div>
     <Home/>
    </div>

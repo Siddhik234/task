@@ -2,7 +2,7 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 
 export const Onlinesales=()=>{
-    return(
+    return( 
         <React.Fragment> 
             <div> <h1 className="head"> Revenue Share online and offline </h1> </div>
         <div>
@@ -14,20 +14,6 @@ export const Onlinesales=()=>{
                 data: [4,,5,,3,,4,,7,,4,,2,,5,,2],
               backgroundColor: [
                 'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                'rgba(255, 99, 132, 11)',
-                
               ],
               borderColor: [
                 
@@ -38,20 +24,6 @@ export const Onlinesales=()=>{
                 label: "offline",
                 data: [45,,52,,31,,45,,37,,48,,28,,35,,22],
               backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 99, 132, 0.2)',
                 
               ],

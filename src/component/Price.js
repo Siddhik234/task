@@ -1,21 +1,22 @@
 import React from 'react'
-import { Bar} from 'react-chartjs-2'
+import { Line} from 'react-chartjs-2'
 
 
-const Revbysegment = () => {   
+export const Price = () => {   
    
   return (
-    
+      <React.Fragment> 
+        <div> <h1 className="head"> Price per Unit </h1> </div>
     <div>
-      <Bar
+      <Line
         data={{
           labels: ["2012","","2014","","2016","","2018","","2020","","2022","","2024",""],
           datasets: [
             {
                 label: "beer",
-                data: [10,12,11,15,17,18,8,15,12,35,23,14,33,27],
+                data: [11, 13, 12, 15, 15, 13,12,17,17,18,13,14,13,11],
               backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
+                "rgb(0,105,153)",
               ],
               borderColor: [
                 
@@ -24,9 +25,10 @@ const Revbysegment = () => {
             },
             
             {label: "cider,perry and rice wine",
-                data: [11, 13, 22, 15,25, 23,12,17,17,18,13,43,34,17],
+                data: [1, 3, 2, 5, 5, 3,2,7,7,1,2,4,3,2],
               backgroundColor: [
                 'rgba(255, 99, 132, 11)',
+                
               ],
               borderColor: [
                 
@@ -34,9 +36,10 @@ const Revbysegment = () => {
               borderWidth: 1,
             },
             {label: "Hard seltzer",
-                data: [1, 13, 2, 15, 5, 3,2,7,17,18,13,4,3,1],
+                data: [31, 33, 32, 35,35, 33,37,37,30,38,33,34,39,31],
               backgroundColor: [
                 'rgb(0, 0, 255)',
+
               ],
               borderColor: [
                 
@@ -44,10 +47,11 @@ const Revbysegment = () => {
               borderWidth: 1,
             },
             {label: "Spirits",
-                data: [31, 13, 32, 15, 15, 33,22,17,47,18,13,14,23,31],
+                data: [55,55,51,57,47,48,48,50,52,51,53,54,53,57],
               backgroundColor: [
                 
                 'rgb(255, 64, 0)',
+                
               ],
               borderColor: [
                 
@@ -56,12 +60,13 @@ const Revbysegment = () => {
             },
             {
                 label: "wine",
-                data: [11, 3, 22, 5, 15, 31,22,7,7,1,12,41,32,12],
+                data: [51,51,45,47,43,41,43,47,46,45,50,51,48,51],
                 backgroundColor: [
-                    'rgb(128, 255, 0)',
+                    'rgb(30,0,102)',
+                    
                 ],
                 borderColor: [
-                    "rgb(0,51,15)",
+                    
                 ],
                 borderWidth: 1,
             },
@@ -71,15 +76,18 @@ const Revbysegment = () => {
         height={400}
         width={600}
         options={{
-          maintainAspectRatio: false,
+        maintainAspectRatio: false,
           scales: {
             xAxes:{
-                stacked:true
+                grid:{
+                    display:true,
+                }
             },
             yAxes: 
                {
-                  beginAtZero: true,
-                  stacked:true
+                  grid:{
+                    display:true,
+                }
                 },
           },
           legend: {
@@ -90,9 +98,9 @@ const Revbysegment = () => {
         }}
       />
     </div>
+    </React.Fragment>
     
     
   )
 }
 
-export default Revbysegment

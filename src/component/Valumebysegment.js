@@ -2,10 +2,11 @@ import React from 'react'
 import { Bar} from 'react-chartjs-2'
 
 
-const Revbysegment = () => {   
+export const Valumebysegment = () => {   
    
   return (
-    
+      <React.Fragment> 
+        <div> <h1 className="head"> Valume by Segment </h1> </div>
     <div>
       <Bar
         data={{
@@ -13,9 +14,9 @@ const Revbysegment = () => {
           datasets: [
             {
                 label: "beer",
-                data: [10,12,11,15,17,18,8,15,12,35,23,14,33,27],
+                data: [55,65,31,45,47,38,28,35,42,35,53,44,33,27],
               backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
+                "rgb(0,105,153)",
               ],
               borderColor: [
                 
@@ -27,6 +28,7 @@ const Revbysegment = () => {
                 data: [11, 13, 22, 15,25, 23,12,17,17,18,13,43,34,17],
               backgroundColor: [
                 'rgba(255, 99, 132, 11)',
+                
               ],
               borderColor: [
                 
@@ -46,8 +48,8 @@ const Revbysegment = () => {
             {label: "Spirits",
                 data: [31, 13, 32, 15, 15, 33,22,17,47,18,13,14,23,31],
               backgroundColor: [
-                
                 'rgb(255, 64, 0)',
+                
               ],
               borderColor: [
                 
@@ -58,10 +60,10 @@ const Revbysegment = () => {
                 label: "wine",
                 data: [11, 3, 22, 5, 15, 31,22,7,7,1,12,41,32,12],
                 backgroundColor: [
-                    'rgb(128, 255, 0)',
+                    'rgb(30,0,102)',
                 ],
                 borderColor: [
-                    "rgb(0,51,15)",
+                    
                 ],
                 borderWidth: 1,
             },
@@ -90,9 +92,9 @@ const Revbysegment = () => {
         }}
       />
     </div>
+    </React.Fragment>
     
     
   )
 }
 
-export default Revbysegment
